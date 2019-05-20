@@ -1,0 +1,26 @@
+<div *ngIf="authorDetails && author">
+
+  <h4>{{author?.firstName}} {{author?.lastName}}'s Books</h4><br/>
+  <button class="m-4" (click)="deleteAuthor(author?.id)">Remove Author</button>
+  <button class="m-4" (click)="sendMessage(author?.firstName)">Send Message</button>
+
+  <table class="table">
+    <tr>
+      <th>Title</th>
+      <th>Publication Year</th>
+      <th>Genres</th>
+    </tr>
+    <tr *ngFor="let book of authorDetails?.books">
+      <td>{{book?.title}}</td>
+      <td>{{book?.publicationYear}}</td>
+      <td>
+        <ul>
+          <li *ngFor="let genre of book?.genres">
+            {{genre?.title}}
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+  
+</div>

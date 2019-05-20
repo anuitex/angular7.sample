@@ -1,0 +1,4 @@
+<app-authorized-toolbar></app-authorized-toolbar>
+<input #imageInput multiple type="file" accept="image/*" (change)="processFile(imageInput)">
+<router-outlet></router-outlet>
+<app-loader [title]="fileName" [isVisible]="fileName" [progress]="progress"></app-loader>

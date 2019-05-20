@@ -1,0 +1,16 @@
+<div *ngIf="isVisible" >
+
+  <h4 class="loaderTitle">{{title}} Loading Progress</h4>
+
+  <circle-progress
+    class="loader"
+    percent="{{progress}}"
+    radius="100"
+    animation="true"
+    animationDuration="1">
+
+  </circle-progress>
+
+  <div class="dim"></div>
+  
+</div>
